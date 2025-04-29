@@ -1,6 +1,11 @@
 import streamlit as st
 from helper_chat import chat, get_llm
 
+#making sure user is logged in
+if not st.experimental_user.is_logged_in:
+    st.write("Please log in to use the chat!")
+    st.stop()
+
 # initializing and storing the llm is session state so I do not need to reinitialize every run
 if "llm" not in st.session_state:
     st.session_state.llm = get_llm()
