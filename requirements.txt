@@ -1,0 +1,7 @@
+Authlib
+streamlit
+pandas
+boto3
+langchain_aws
+langchain
+langchain_community
